@@ -12,6 +12,13 @@ When a file has too many classes, it becomes hard to maintain. It's better to ha
 $ classes_to_files <file>
 ```
 
+## Installation
+
+```bash
+$ curl -s https://raw.githubusercontent.com/capimichi/classes-to-files/main/classes_to_files.sh > /usr/local/bin/classes_to_files
+$ chmod +x /usr/local/bin/classes_to_files
+```
+
 ## Example
 
 ```bash
