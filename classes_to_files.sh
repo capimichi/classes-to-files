@@ -35,6 +35,9 @@ do
             # if not file already exists, create it
             if [ ! -f $OUTPUT_PATH ]; then
                 echo -e $OUTPUT_CONTENT > $OUTPUT_PATH
+                echo "Created file: $OUTPUT_PATH"
+            else
+                echo "File already exists: $OUTPUT_PATH"
             fi
 
             CURRENT_CLASS_CONTENT=""
@@ -53,7 +56,6 @@ do
         CURRENT_CLASS_NAME=$(echo $CURRENT_CLASS_NAME | sed 's/ *$//g')
         # remove everything after " "
         CURRENT_CLASS_NAME=$(echo $CURRENT_CLASS_NAME | sed 's/ .*//g')
-        echo "$CURRENT_CLASS_NAME"
     fi
 
     # if not CLASSES_STARTED, add the line to the header
@@ -63,6 +65,4 @@ do
         # Append the line to the current class content
         CURRENT_CLASS_CONTENT="$CURRENT_CLASS_CONTENT\n$line"
     fi
-
-
 done
